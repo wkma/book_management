@@ -13,6 +13,8 @@
         <th>ID</th>
         <th>书名</th>
         <th>价格</th>
+        <th>编辑</th>
+        <th>操作</th>
     </tr>
     </thead>
     <tbody>
@@ -21,6 +23,9 @@
             <td>{{.ID}}</td>
             <td>{{.Title}}</td>
             <td>{{.Price}}</td>
+            <td><a href="book/edit?id={{.ID}}">编辑</a> </td>
+            <td><a href="/book/delete?id={{.ID}}">删除</a></td>
+
         </tr>
         {{end}}
     </tbody>

@@ -1,0 +1,33 @@
+{{define "book_edit.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编辑书籍</title>
+</head>
+<body style="background-color:cadetblue">
+<form action="" method="post">
+{{/*    朝当前id提交法一：action为空默认朝当前url提交*/}}
+{{/*    <div>*/}}
+{{/*        <input type="hidden" name="id" value="{{.ID}}">  #朝当前id提交法二*/}}
+{{/*    法三hidden换成readonly*/}}
+{{/*    </div>*/}}
+    <div>
+        <label>书名：
+            <input type="text" name="title" value="{{.Title}}">
+        </label>
+    </div>
+    <div>
+        <label>价格:
+            <input type="number" name="price" value="{{.Price}}">
+        </label>
+    </div>
+    <div>
+        <label>
+            <input type="submit" value="提交">
+        </label>
+    </div>
+</form>
+</body>
+</html>
+{{end}}
